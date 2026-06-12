@@ -6,7 +6,7 @@ const path = require('path');
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: 'https://kausheen-awaishk7866s-projects.vercel.app/' }));
 app.use(express.json({ limit: '10mb' }));
 
 // API routes
