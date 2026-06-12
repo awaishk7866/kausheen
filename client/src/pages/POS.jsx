@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+import axios from '../utils/api';
 import toast from 'react-hot-toast';
 import QRCode from 'react-qr-code';
 import {
