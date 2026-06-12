@@ -12,7 +12,8 @@ export function AuthProvider({ children }) {
     const verify = async () => {
       if (token) {
         try {
-          await axios.get('/api/auth/verify', { headers: { Authorization: `Bearer ${token}` } });
+          const base = import.meta.env.VITE_API_URL || '';
+await axios.get(`${base}/api/auth/verify`, { headers: { Authorization: `Bearer ${token}` } });
         } catch {
           logout();
         }

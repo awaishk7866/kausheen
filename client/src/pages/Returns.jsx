@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../utils/api';
 import toast from 'react-hot-toast';
 import { Search, X, RotateCcw, CheckCircle, AlertCircle } from 'lucide-react';
 

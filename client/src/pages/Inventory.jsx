@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-import axios from 'axios';
+import axios from '../utils/api';
 import toast from 'react-hot-toast';
 import { Plus, Search, Edit2, Trash2, X, Save, AlertTriangle, Package, ChevronUp, ChevronDown } from 'lucide-react';
 

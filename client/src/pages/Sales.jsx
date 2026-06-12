@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../utils/api';
 import toast from 'react-hot-toast';
 import { Download, Search, X, Calendar, FileSpreadsheet, Receipt, IndianRupee, TrendingUp, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import { format } from 'date-fns';
