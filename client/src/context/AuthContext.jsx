@@ -24,7 +24,7 @@ await axios.get(`${base}/api/auth/verify`, { headers: { Authorization: `Bearer $
   }, []);
 
   const login = async (username, password) => {
-    const res = await axios.post('/api/auth/login', { username, password });
+    const res = await axios.post('https://kausheen.onrender.com/api/auth/login', { username, password });
     const { token: t } = res.data;
     localStorage.setItem('kauth_token', t);
     setToken(t);
