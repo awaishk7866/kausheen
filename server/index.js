@@ -6,7 +6,17 @@ const path = require('path');
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: "https://kausheen-git-main-awaishk7866s-projects.vercel.app" }));
+app.use(cors({
+  origin: [
+    'https://kausheen-git-main-awaishk7866s-projects.vercel.app',
+    'http://localhost:5173',
+    'http://localhost:3000',
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+app.options('*', cors());
 app.use(express.json({ limit: '10mb' }));
 
 // API routes
