@@ -54,7 +54,7 @@ export default function Layout() {
       <aside
         className={`
           fixed md:relative
-          z-50 md:z-auto
+          z-[100] md:z-auto
           h-full w-64
           bg-[#1a1a2e]
           border-r border-white/[0.06]
