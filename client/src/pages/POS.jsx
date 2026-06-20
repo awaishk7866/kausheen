@@ -194,7 +194,7 @@ export default function POS() {
                 autoComplete="off"
               />
               {showSug && suggestions.length > 0 && (
-                <div className="absolute top-full mt-1 left-0 right-0 glass rounded-xl overflow-hidden z-[9999] shadow-2xl border border-white/10">
+                <div className="absolute top-full mt-1 left-0 right-0 glass rounded-xl overflow-hidden z-50 shadow-2xl border border-white/10">
                   {suggestions.map(item => (
                     <button key={item._id} onClick={() => addItem(item)}
                       className="w-full flex items-center justify-between px-4 py-3 hover:bg-white/5 transition-colors text-left border-b border-white/[0.04] last:border-0">
