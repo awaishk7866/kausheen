@@ -46,10 +46,20 @@ export default function POS() {
 
   // Close suggestions on outside click
   useEffect(() => {
-    const fn = e => { if (!sugRef.current?.contains(e.target)) setShowSug(false); };
-    document.addEventListener('mousedown', fn);
-    return () => document.removeEventListener('mousedown', fn);
-  }, []);
+  const closeSuggestions = (e) => {
+    if (!sugRef.current?.contains(e.target)) {
+      setShowSug(false);
+    }
+  };
+
+  document.addEventListener('mousedown', closeSuggestions);
+  document.addEventListener('touchstart', closeSuggestions);
+
+  return () => {
+    document.removeEventListener('mousedown', closeSuggestions);
+    document.removeEventListener('touchstart', closeSuggestions);
+  };
+}, []);
 
   // Load held bills
   const loadHeld = async () => {
